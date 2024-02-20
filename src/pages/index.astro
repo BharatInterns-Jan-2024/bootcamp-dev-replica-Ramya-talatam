@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Content from '../components/try.astro';
+import Menu from '../components/internet.astro';
+---
+<Layout title="Valley of Code">
+	<main>
+		<Menu />
+		<Content title="The Internet" desc="The basics of computer networks and protocols, introducing URLs, DNS, TCP, and UDP" body="" />
+	</main>
+	<script>
+        const urlitem = document.getElementById('intro-item');
+            urlitem.classList.add('active');
+    </script>
+</Layout>
+
+
+

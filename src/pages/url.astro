@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Content from '../components/try.astro';
+import Menu from '../components/internet.astro';
+---
+
+<Layout title="Valley of Code">
+	<main>
+		<Menu />
+		<Content title="The Internet: What is a URL" body="" />
+	</main>
+    <script>
+        const urlitem = document.getElementById('url-item');
+            urlitem.classList.add('active');
+    </script>
+</Layout>
+
+
+
