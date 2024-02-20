@@ -2,12 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import Content from '../components/try.astro';
 import Menu from '../components/internet.astro';
+let posts = await Astro.glob('./url.md');
+let post = posts[0];
 ---
 
 <Layout title="Valley of Code">
 	<main>
 		<Menu />
+        <div class="content">
 		<Content title="The Internet: What is a URL" body="" />
+        <post.Content />
+    </div>
 	</main>
     <script>
         const urlitem = document.getElementById('url-item');

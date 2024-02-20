@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/layout'
+
 ---
 <style>
     a
@@ -9,6 +9,7 @@ import Layout from '../../layouts/layout'
     }
     .und
     {
+        font-size: 14px;
         cursor:pointer;
     }
     a:hover, .und:hover
@@ -17,7 +18,7 @@ import Layout from '../../layouts/layout'
        
     }
     svg{
-        width: 100%;
+        width: 13rem;
         height: auto;
     }
     rect {
@@ -31,9 +32,14 @@ h2
 	}
     .menu
     {
-        padding:24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        width: 33.3333%;
+        min-width: 33.3333%;
+        padding:40px 0;
         width:200px;
-        margin-left:5rem;
     }
    .nav-list
    {
@@ -64,12 +70,12 @@ h2
 
  <h2> The Internet</h2>
  <ol class="nav-list">
-    <li class="nav-item" id="intro-item" ><a href="../#">Introduction</a></li>
-        <li class="nav-item" id="url-item"><a href="../url">What is a URL</a></li>
-        <li class="nav-item" id="port-item" ><a href="../port">What is a port</a></li>
-        <li class="nav-item" onclick="handleClick(this)"><a href="#">The DNS protocol</a></li>
-        <li class="nav-item" onclick="handleClick(this)"><a href="#">The TCP protocol</a></li>
-        <li class="nav-item" onclick="handleClick(this)"><a href="#">The UDP protocol</a></li>
+    <li class="nav-item" id="intro-item" ><a href="#">Introduction</a></li>
+        <li class="nav-item" id="url-item"><a href="url">What is a URL</a></li>
+        <li class="nav-item" id="port-item" ><a href="port">What is a port</a></li>
+        <li class="nav-item" ><a href="#">The DNS protocol</a></li>
+        <li class="nav-item" ><a href="#">The TCP protocol</a></li>
+        <li class="nav-item" ><a href="#">The UDP protocol</a></li>
 </ol>
 
 <p><span class="und">[← back to the Valley]</span></p>
