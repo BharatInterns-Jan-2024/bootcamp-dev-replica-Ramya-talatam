@@ -3,9 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/fcard.astro'
 import FAQ from '../components/faq.astro';
 import Content from '../components/try.astro';
+let x= await Astro.glob('../content/p0.md');
+let header = x[0];
+let x0= await Astro.glob('../content/p1.md');
+let p0 = x0[0];
 let x1 = await Astro.glob('../content/p2.md');
 let p1 = x1[0];
-
+let f = await Astro.glob('../content/footer.md');
+let footer = f[0];
 let x2 = await Astro.glob('../content/p3.md');
 let p2 = x2[0];
 let x3 = await Astro.glob('../content/p4.md');
@@ -19,23 +24,31 @@ let p5 = x5[0];
 
 <Layout title="Bootcamp">
 	<main>
+		
 		<div class="content">
 		<!-- <Content title="The Internet" desc="The basics of computer networks and protocols, introducing URLs, DNS, TCP, and UDP" body="" /> -->
+			<header >
+				<header.Content/>
+			</header>
+		<div class="p0" >
+			<p0.Content/>
+		</div>
+		
 		<div class="p1">
 			<p1.Content/>
 		</div>
 		<div class="p2" >
 			<p2.Content/>
 		</div> 
-		<div class="p3">
+		<div class="p3" id="program">
 			<p3.Content/>
 		</div>
 		<div class="p4">
 			<p4.Content/>
-		</div>
+		</div >
 		<p5.Content />
 		
-		  <div class="cards">
+		  <div class="cards" id="testimonials">
 			<Card content="The web development bootcamp was a game changer for me. It taught me how to develop modern web applications using the best practices, I recommend it 100%!!!" author="Victor Campos" />
 			
 			<Card content="I can’t recommend enough this course for self-learner developer. It gives me the bird's eye view of current technology and lots of portfolio projects. But my most valuable takeaway from this course is the newbie learning community that learns together with you. For me, this course boost my confidence to apply for dev jobs, and alhamdulillah, 1 month later I got a full time job as a developer." author="Ivan Zulfikar" />
@@ -97,7 +110,7 @@ let p5 = x5[0];
 			<Card content="I had the pleasure of attending the 'Flavio Copes JavaScript boot camps' educational programs in 2021, 2022, and 2023 and found them to be an incredibly valuable learning experience. The program provided clear and concise instruction on important aspects of coding and modern technology, and the practical examples and hands-on projects allowed me to apply what I was learning in real-world examples, which was incredibly valuable to my understanding and skill development. As a mature professional, the multi-week program was flexible and allowed me to learn at my own pace, which was great for balancing my work and life schedule. The clear step-by-step approach of the program, focused on important aspects of coding and current tools and services, has made the learning process manageable and enjoyable for me. The community aspect of the program was also a major plus, as it provided a supportive and encouraging environment for learning and growth. Overall, I would highly recommend the 'JavaScript boot camp' to anyone looking to improve their skills and knowledge in the world of coding." author="Jeff – Toronto, Canada" />
 		  </div>
 		  <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Flavio is a legend! I would do this if I were jumping into web dev. <a href="https://t.co/gTbsCcpK0f">https://t.co/gTbsCcpK0f</a></p>&mdash; Daniel Vassallo (@dvassallo) <a href="https://twitter.com/dvassallo/status/1606783843398471680?ref_src=twsrc%5Etfw">December 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		  <p>Frequently asked questions</p>
+		  <p id="faq">Frequently asked questions</p>
 		  <div class="cards">
 			<FAQ title="Who is this bootcamp for?" content="Too many tutorials and little action? This bootcamp is perfect for you. Web development looks complex to you? This bootcamp is perfect for you. You're a frontend dev and you want to get more fullstack/backend skills? This bootcamp is great for you. You're a backend dev and you want to get more frontend skills? This bootcamp is great for you." />
 
@@ -128,6 +141,9 @@ let p5 = x5[0];
     <FAQ title="Is the training instructor led? How does it work?" content="I (Flavio Copes) built the entire curriculum, lessons, and projects. I will unlock access to a new lessons module each week. It's not like in school where I'll have lectures. Instead, you find the lessons on a web page and you go through each lesson on your own. The content will be text based. The particular thing about the bootcamp cohort is that you're studying privately, but you're not on your own. You'll have other students you can talk to, ask questions, help each other. All of them are doing the same things you're doing now. And I (the instructor) will be in the Discord chat as much as possible to help everyone during the bootcamp so that no one gets left behind and we can all complete the course successfully." />
  
 		  </div>
+		  <footer>
+			<footer.Content/>
+		  </footer>
 	</div>
 	</main>
 </Layout>
@@ -136,6 +152,7 @@ let p5 = x5[0];
 		
 		font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
 	}
+	
 	.content
 	{
 		display: flex;
@@ -145,6 +162,9 @@ let p5 = x5[0];
 		justify-items: center;
 		gap:3rem;
 	}
+	
+	
+
 	 .p1 {
 		padding: 80px;
 		font-size: 1.25rem;
