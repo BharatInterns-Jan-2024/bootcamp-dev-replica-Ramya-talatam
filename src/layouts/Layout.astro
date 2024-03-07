@@ -61,7 +61,11 @@ const { title } = Astro.props;
 	}
 	.p0 p>img
 	{
-		max-width: 36rem;
+		max-width: 70rem;
+	}
+	.p2 p>img{
+		max-width: 50%;
+	
 	}
 	footer
 	{
@@ -69,5 +73,17 @@ const { title } = Astro.props;
 	}
 	footer a{
 		color: #18181B;
+	}
+	@media(prefers-color-scheme: dark)
+	{
+		body
+		{
+			filter: invert(100%);
+			background-color: rgb(29, 32,31)!important;
+		}
+		img
+		{
+			filter: invert(100%);
+		}
 	}
 </style>

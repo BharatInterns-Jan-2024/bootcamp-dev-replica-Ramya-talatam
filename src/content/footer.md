@@ -1,3 +1,3 @@
-Questions?  [Email me](mailto:flavio@flaviocopes.com)!
+Questions?  [Email Us](mailto:enhance42@gmail.com)!
 
-© BOOTCAMP.DEV
+© CPC42
