@@ -87,4 +87,12 @@ const { title } = Astro.props;
 			filter: invert(100%);
 		}
 	}
+	@media (max-width: 600px) {
+	.p0>p img
+	{
+    width: 100%;
+	scale: 1.4;
+	clip-path: inset(0 15% 0 15% round 1.5rem);
+	}
+        }
 </style>
